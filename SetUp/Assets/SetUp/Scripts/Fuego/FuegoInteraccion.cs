@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class FuegoInteraccion : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private void OnTriggerEnter(Collider other)
     {
-        
-    }
+        // Busca un componente del tipo "TargetActivator" en el objeto con el que colisiona
+        AntorchaInteraccion activator = other.GetComponent<AntorchaInteraccion>();
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (activator != null)
+        {
+            activator.ActivateTarget();
+        }
     }
 }
