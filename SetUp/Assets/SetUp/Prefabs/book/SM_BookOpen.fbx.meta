@@ -3,7 +3,27 @@ guid: 9ef4ef2d349c85a408e4ad12a833b9ad
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Leather3
+    second: {fileID: 2100000, guid: 0b0df59efaf511b4b86ddb3af250411a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Paper3
+    second: {fileID: 2100000, guid: 0ffd6b47b4ad4494188ca60f47ce3bda, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Paper4
+    second: {fileID: 2100000, guid: 2d67bdfe8bae0204b99806b1b38e7e87, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Paper_Side3
+    second: {fileID: 2100000, guid: 3ed3725cec0dc904a8374fb20ed2ca2d, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
