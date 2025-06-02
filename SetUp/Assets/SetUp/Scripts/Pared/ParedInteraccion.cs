@@ -10,7 +10,8 @@ public class ParedInteraccion : MonoBehaviour
 
     public void ActivateTarget()
     {
-        Instantiate(objectDestroyed, transform.position, Quaternion.identity);
+        GameObject obj = Instantiate(objectDestroyed, transform.position, Quaternion.identity);
         Destroy(this.gameObject);
+        Destroy(obj, 3f);
     }
 }
