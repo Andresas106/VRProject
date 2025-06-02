@@ -60280,6 +60280,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1751667650856748853, guid: 8fa293d5c54d5ba499ce9464a9f87f0d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2111799204543793538, guid: 8fa293d5c54d5ba499ce9464a9f87f0d, type: 3}
       propertyPath: m_LocalPosition.y
       value: 1.07
@@ -122113,6 +122117,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2392374838132792410, guid: ec8277c186a4e084796d3f46a24d2cd2, type: 3}
+      propertyPath: m_Name
+      value: Teletranporte
+      objectReference: {fileID: 0}
     - target: {fileID: 3060403281895130848, guid: ec8277c186a4e084796d3f46a24d2cd2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.973
@@ -122152,10 +122160,6 @@ PrefabInstance:
     - target: {fileID: 3060403281895130848, guid: ec8277c186a4e084796d3f46a24d2cd2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -167.222
-      objectReference: {fileID: 0}
-    - target: {fileID: 2392374838132792410, guid: ec8277c186a4e084796d3f46a24d2cd2, type: 3}
-      propertyPath: m_Name
-      value: Teletranporte
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
