@@ -72084,7 +72084,7 @@ MonoBehaviour:
   m_GestureEnded:
     m_PersistentCalls:
       m_Calls: []
-  m_MinimumHoldTime: 0.2
+  m_MinimumHoldTime: 1
   m_GestureDetectionInterval: 0.1
   m_StaticGestures: []
   m_Highlight: {fileID: 0}
