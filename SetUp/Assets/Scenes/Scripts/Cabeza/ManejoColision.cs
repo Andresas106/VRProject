@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+public class ManejoColision : MonoBehaviour
 {
     [SerializeField]
     private DeteccionColision _detector;
@@ -16,7 +16,7 @@ public class NewBehaviourScript : MonoBehaviour
         foreach (RaycastHit hitPoint in colliderHits)
         {
             combinedNormal +=
-                new Vector3(hitPoint.normal.x, 0, hitPoint.normal.z); ;
+                new Vector3(hitPoint.normal.x, 0, hitPoint.normal.z);
         }
         return combinedNormal;
     }

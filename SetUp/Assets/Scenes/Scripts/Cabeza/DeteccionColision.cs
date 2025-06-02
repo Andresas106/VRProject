@@ -6,69 +6,77 @@ public class DeteccionColision : MonoBehaviour
 {
     [SerializeField, Range(0, 0.5f)]
     private float _detectionDelay = 0.05f;
+
     [SerializeField]
     private float _detectionDistance = 0.2f;
+
+    [Header("Tags a detectar")]
     [SerializeField]
-    private LayerMask _detectionLayers;
+    private string[] _detectionTags;
+
     public List<RaycastHit> DetectedColliderHits { get; private set; }
 
     private float _currentTime = 0;
 
-    private List<RaycastHit> PreformDetection
-    (Vector3 position, float distance, LayerMask mask)
+    private List<RaycastHit> RealizarDeteccion(Vector3 posicion, float distancia)
     {
-        List<RaycastHit> detectedHits = new();
+        List<RaycastHit> impactosDetectados = new();
+        List<Vector3> direcciones = new() { transform.forward, transform.right, -transform.right };
 
-        List<Vector3> directions
-            = new() { transform.forward, transform.right, -transform.right };
-
-        RaycastHit hit;
-        foreach (var dir in directions)
+        foreach (var dir in direcciones)
         {
-            if (Physics.Raycast(position, dir, out hit, distance, mask))
+            if (Physics.Raycast(posicion, dir, out RaycastHit hit, distancia))
             {
-                detectedHits.Add(hit);
+                if (_detectionTags == null || _detectionTags.Length == 0)
+                {
+                    impactosDetectados.Add(hit); // si no hay tags definidos, acepta todos
+                }
+                else
+                {
+                    foreach (var tag in _detectionTags)
+                    {
+                        if (hit.collider.CompareTag(tag))
+                        {
+                            impactosDetectados.Add(hit);
+                            break;
+                        }
+                    }
+                }
             }
         }
-        return detectedHits;
+
+        return impactosDetectados;
     }
 
     private void Start()
     {
-        DetectedColliderHits = PreformDetection(transform.position,
-           _detectionDistance, _detectionLayers);
+        DetectedColliderHits = RealizarDeteccion(transform.position, _detectionDistance);
     }
-    void Update()
+
+    private void Update()
     {
         _currentTime += Time.deltaTime;
         if (_currentTime > _detectionDelay)
         {
             _currentTime = 0;
-            DetectedColliderHits = PreformDetection(transform.position,
-                _detectionDistance, _detectionLayers);
+            DetectedColliderHits = RealizarDeteccion(transform.position, _detectionDistance);
         }
     }
 
     private void OnDrawGizmos()
     {
-        if (Application.isPlaying == false)
+        if (!Application.isPlaying)
             return;
-        Color c = Color.green;
-        c.a = 0.5f;
-        if (DetectedColliderHits.Count > 0)
-        {
-            c = Color.red;
-            c.a = 0.5f;
-        }
 
-        Gizmos.color = c;
+        Color color = DetectedColliderHits.Count > 0 ? new Color(1, 0, 0, 0.5f) : new Color(0, 1, 0, 0.5f);
+        Gizmos.color = color;
         Gizmos.DrawWireSphere(transform.position, _detectionDistance);
 
-        List<Vector3> directions = new() { transform.forward, transform.right, -transform.right };
         Gizmos.color = Color.magenta;
-        foreach (var dir in directions)
+        List<Vector3> direcciones = new() { transform.forward, transform.right, -transform.right };
+        foreach (var dir in direcciones)
         {
-            Gizmos.DrawRay(transform.position, dir);
+            Gizmos.DrawRay(transform.position, dir * _detectionDistance);
         }
     }
 }
