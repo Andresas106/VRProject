@@ -6,8 +6,10 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class Libro : MonoBehaviour
 {
     private XRGrabInteractable grabInteractable;
-
     private bool hasActivated = false;
+
+    [Header("Referencia al Animator externo")]
+    public Animator externalAnimator; // <- arrástralo en el Inspector
 
     void Start()
     {
@@ -18,24 +20,17 @@ public class Libro : MonoBehaviour
     private void OnBookGrabbed(SelectEnterEventArgs args)
     {
         if (hasActivated) return;
-
         hasActivated = true;
 
-        Debug.Log("Libro recogido, activando mecanismo...");
+        Debug.Log("Libro recogido, activando trigger 'Libreria'...");
 
-        // Opción A: Usas animación
-       /* if (wallAnimator != null)
+        if (externalAnimator != null)
         {
-            wallAnimator.SetTrigger("OpenSecretWall");
+            externalAnimator.SetTrigger("libreria");
         }
-
-        // Opción B: Desactivas el muro (como si desapareciera)
-        if (secretWall != null)
+        else
         {
-            secretWall.SetActive(false);
-        }*/
-
-        // Opción C: Mueves la pared
-        // StartCoroutine(MoveWallCoroutine());
+            Debug.LogWarning("No se ha asignado el Animator externo.");
+        }
     }
 }
