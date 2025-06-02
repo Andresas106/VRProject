@@ -64,6 +64,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4166774215184935065, guid: 8fa293d5c54d5ba499ce9464a9f87f0d, type: 3}
+      propertyPath: particlesToActivate
+      value: 
+      objectReference: {fileID: 381950545681285975}
     - target: {fileID: 4459607845329900363, guid: 8fa293d5c54d5ba499ce9464a9f87f0d, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -81,3 +85,8 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8fa293d5c54d5ba499ce9464a9f87f0d, type: 3}
+--- !u!1 &381950545681285975 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7700514824498035584, guid: 8fa293d5c54d5ba499ce9464a9f87f0d, type: 3}
+  m_PrefabInstance: {fileID: 8039290992950261975}
+  m_PrefabAsset: {fileID: 0}
