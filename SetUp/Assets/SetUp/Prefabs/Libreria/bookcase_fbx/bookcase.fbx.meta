@@ -3,7 +3,17 @@ guid: a364f5f3042f10a4181d5e27dffdea3d
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Shkaf2_mtl
+    second: {fileID: 2100000, guid: 52e93049d3df7ec4e885726987e81ad3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Shkaf_mtl
+    second: {fileID: 2100000, guid: 3aa71b80e89419445a21510654281539, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
