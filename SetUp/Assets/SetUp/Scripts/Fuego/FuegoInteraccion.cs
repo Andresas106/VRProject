@@ -8,10 +8,16 @@ public class FuegoInteraccion : MonoBehaviour
     {
         // Busca un componente del tipo "TargetActivator" en el objeto con el que colisiona
         AntorchaInteraccion activator = other.GetComponent<AntorchaInteraccion>();
+        Nivel3Rayos activatorRayos = other.GetComponent<Nivel3Rayos>();
 
         if (activator != null)
         {
             activator.ActivateTarget();
+        }
+
+        if (activatorRayos != null)
+        {
+            activatorRayos.ActivateTarget();
         }
     }
 }
