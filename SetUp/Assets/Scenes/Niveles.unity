@@ -275,7 +275,7 @@ MonoBehaviour:
   m_HandTrackingEvents: {fileID: 35777453}
   m_HandShapeOrPose: {fileID: 11400000, guid: 12b7553ab96eec740a48bfc34b6a3de0, type: 2}
   m_TargetTransform: {fileID: 0}
-  m_Background: {fileID: 0}
+  m_Background: {fileID: 726169169}
   m_GesturePerformed:
     m_PersistentCalls:
       m_Calls:
@@ -5472,7 +5472,7 @@ MonoBehaviour:
   m_HandTrackingEvents: {fileID: 552436596}
   m_HandShapeOrPose: {fileID: 11400000, guid: 79f6ab109df92e344866fc621442293e, type: 2}
   m_TargetTransform: {fileID: 0}
-  m_Background: {fileID: 0}
+  m_Background: {fileID: 726169169}
   m_GesturePerformed:
     m_PersistentCalls:
       m_Calls:
@@ -5746,7 +5746,7 @@ MonoBehaviour:
   m_HandTrackingEvents: {fileID: 552436596}
   m_HandShapeOrPose: {fileID: 11400000, guid: c12b54594b64438428d540ab6e53ba81, type: 2}
   m_TargetTransform: {fileID: 0}
-  m_Background: {fileID: 0}
+  m_Background: {fileID: 726169169}
   m_GesturePerformed:
     m_PersistentCalls:
       m_Calls:
@@ -14581,6 +14581,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5289182684458692541, guid: e5db301629853dd4a99835fa70099d79, type: 3}
   m_PrefabInstance: {fileID: 726169167}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &726169169 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4462709362712937534, guid: e5db301629853dd4a99835fa70099d79, type: 3}
+  m_PrefabInstance: {fileID: 726169167}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &729507878
 GameObject:
   m_ObjectHideFlags: 0
@@ -19588,7 +19599,7 @@ MonoBehaviour:
   m_HandTrackingEvents: {fileID: 35777453}
   m_HandShapeOrPose: {fileID: 11400000, guid: 7fdd2afa44a436446bdb55fa7872a77d, type: 2}
   m_TargetTransform: {fileID: 0}
-  m_Background: {fileID: 0}
+  m_Background: {fileID: 726169169}
   m_GesturePerformed:
     m_PersistentCalls:
       m_Calls:
@@ -25437,7 +25448,7 @@ MonoBehaviour:
   m_HandTrackingEvents: {fileID: 35777453}
   m_HandShapeOrPose: {fileID: 11400000, guid: 79f6ab109df92e344866fc621442293e, type: 2}
   m_TargetTransform: {fileID: 0}
-  m_Background: {fileID: 0}
+  m_Background: {fileID: 726169169}
   m_GesturePerformed:
     m_PersistentCalls:
       m_Calls:
@@ -25971,7 +25982,7 @@ MonoBehaviour:
   m_HandTrackingEvents: {fileID: 35777453}
   m_HandShapeOrPose: {fileID: 11400000, guid: c12b54594b64438428d540ab6e53ba81, type: 2}
   m_TargetTransform: {fileID: 0}
-  m_Background: {fileID: 0}
+  m_Background: {fileID: 726169169}
   m_GesturePerformed:
     m_PersistentCalls:
       m_Calls:
@@ -35282,7 +35293,7 @@ MonoBehaviour:
   m_HandTrackingEvents: {fileID: 552436596}
   m_HandShapeOrPose: {fileID: 11400000, guid: 7fdd2afa44a436446bdb55fa7872a77d, type: 2}
   m_TargetTransform: {fileID: 0}
-  m_Background: {fileID: 0}
+  m_Background: {fileID: 726169169}
   m_GesturePerformed:
     m_PersistentCalls:
       m_Calls:
